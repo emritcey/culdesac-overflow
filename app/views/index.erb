@@ -1,0 +1,15 @@
+<% @questions.each do |question| %>
+  <div class="info-box">
+    <div id="info-box-votes" ><%= question.votes %>Votes</div>
+    <div id="info-box-answers" ><%= question.answers.count %>Answers</div>
+    <div id="info-box-views" ><%= question.views_count %>Views</div>
+  </div>
+<% end %>
+<div id="question-title-display"><%= question.title %> </div>
+
+<div id="tag-display"></div>
+<% question.tags.each do |tag| %>
+  <button type="button" class="tag"><% tag.description %></button>
+<% end %>
+ <!--  <button type="button" class="tag">bbqs</button>
+  <button type="button" class="tag">blessed</button> -->
