@@ -1,4 +1,4 @@
-class CreateQuestionsTable < ActiveRecord::Migration
+class CreateQuestions < ActiveRecord::Migration
   def change
   	create_table :questions do |t|
   		t.string :title
