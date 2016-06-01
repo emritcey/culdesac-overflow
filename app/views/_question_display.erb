@@ -1,14 +1,15 @@
+<h1>Questions</h1>
 <div id="question-list-container">
 <% @questions.each do |question| %>
 
 
   <div id="question-container" >
 
-    <div id="box-container">
+    <div id="box-container"><a href="/questions/<%= question.id %>">
         <div class="stat-boxes" id="stat-box-question">
           <span class="value"><%= question.votes.count %></span><br>
           <span class="word">votes</span>
-        </div>
+    </div>
 
         <div class="stat-boxes" id="stat-box-answer">
           <span class="value"><%= question.answers.count %> </span><br>
@@ -18,15 +19,17 @@
           <span class="value"><%= question.views_count.to_i %></span><br>
           <span class="word">views</span>
         </div>
-    </div>
+    </a></div>
 
     <div class="title-container">
-      <div id="qtitle"><%= question.title %></div>
-      <div id="under-title">asked by <%= question.questioner.username%> </div>
+      <div id="qtitle"><a href="/questions/<%= question.id %>"><%= question.title %></a></div>
+      <div id="under-title">asked by <a href="/users/:id"><%= question.questioner.username%></a> </div>
         <% question.tags.each do |tag| %>
           <button type="button" class="tag"><%= tag.description %></button>
         <% end %>
+
     </div>
+
   </div>
 
 

@@ -4,13 +4,19 @@ body {
   background-color: #DCE1E3;
 }
 /* Home Page Elements*/
+h1 {
+  font-size: 20px;
+}
+a {
+  color: #5F77CC;
+  text-decoration: none;
+}
 #question-container {
   border-top: 1px solid gray;
   max-width: 800px;
 }
 
 #box-container {
-  /*border: 1px solid black;*/
   display: inline-block;
   width: 300px;
 
@@ -19,7 +25,6 @@ body {
 .stat-boxes {
   display: inline-block;
   width: 90px;
-  /*border: 1px solid black;*/
   text-align: center;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -33,14 +38,11 @@ body {
   font-size: 15px;
 }
 .title-container {
-  /*border: 1px solid black;*/
   width: 400px;
   display: inline-block;
-  /*margin-top: 25px;*/
-
 }
 #qtitle {
-  color: #5F77CC;
+
   font-size: 20px;
 }
 #under-title {
