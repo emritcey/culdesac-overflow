@@ -1,0 +1,24 @@
+<div class="topbar">
+    <div class="js-topbar-dialog-corral">
+        <div class="header">
+            <h3><a href="/">Cul de Sac Overflow</a></h3>
+            <a href="" id="inbox-icon">Inbox</a>
+            <a href="" id="reputation_and_badges">Reputation and Badges</a>
+        </div>
+
+        <div class="topbar-links">
+            <div class="links-container">
+                <span class="topbar-menu-links">
+                    <a href="/users/new">sign up</a>
+                    <% if logged_in? %>
+                    <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+                    <% else %>
+                    <a href="/users/login">log in</a>
+                    <% end %>
+                    <a href="">tour</a>
+                    <a href="">help</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
