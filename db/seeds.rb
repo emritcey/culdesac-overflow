@@ -1,6 +1,6 @@
 require 'faker'
 
-poly_types = ["question", "answer"]
+poly_types = ["Question", "Answer"]
 
 tags = ["driveway care", "lawn maintenance", "mailbox design", "shrubbery", "dead ends", "street shape", "safety", "loopty-loo", "pockets", "circular", "soccer practice", "spotting hoodlums", "community", "front-door color", "neighbors", "welcome wagons", "curfew", "suburban life", "soccer moms", "street hockey", "kids", "vans"]
 
