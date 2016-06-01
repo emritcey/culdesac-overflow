@@ -4,5 +4,6 @@ class CreateTags < ActiveRecord::Migration
       t.string :description
 
       t.timestamps null: false
+    end 
   end
 end
