@@ -1,0 +1,18 @@
+body {
+  max-width: 960px;
+  margin: auto;
+}
+/*
+.info-box {
+  border: 1px solid black;
+  padding: 5px;
+}*/
+
+
+.tag {
+  border: 1px solid #B7E1FC;
+  background: #B7E1FC;
+  color: #495A64;
+  padding: 5px;
+  text-decoration: none;
+}
