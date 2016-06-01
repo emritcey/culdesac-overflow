@@ -2,11 +2,21 @@ body {
   max-width: 960px;
   margin: auto;
 }
-/*
-.info-box {
+/* Home Page Elements*/
+#box-container {
   border: 1px solid black;
   padding: 5px;
-}*/
+  width: 300px;
+}
+
+.stat-boxes {
+  display: inline-block;
+  width: 90px;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
 
 
 .tag {
