@@ -12,7 +12,7 @@
 
     <div id="title-container">
       <div id="qtitle"><%= question.title %></div>
-      <div class="under-title">asked by question.questioner.username </div>
+      <div class="under-title">asked by <%= question.questioner.username%> </div>
         <% question.tags.each do |tag| %>
           <button type="button" class="tag"><%= tag.description %></button>
         <% end %>
