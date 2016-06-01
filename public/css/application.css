@@ -4,7 +4,7 @@ body {
 }
 /* Home Page Elements*/
 #question-container {
-  border: 2px solid blue;
+  border-top: 2px solid blue;
   max-width: 800px;
 }
 
@@ -22,9 +22,16 @@ body {
   padding-top: 17px;
   padding-bottom: 17px;
 }
-
+.value {
+  color: purple;
+  font-size: 25px;
+}
+.word{
+  color: pink;
+  font-size: 15px;
+}
 #title-container {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 400px;
   display: inline-block;
   /*margin-top: 25px;*/
