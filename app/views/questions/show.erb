@@ -6,22 +6,23 @@
     <%= @question.description %>
   </p>
   <ul class="question_stats">
-    <%= @question.updated_at %>
-    <%= @question.questioner.username %>
+    <li><%= @question.updated_at %></li>
+    <li><%= @question.questioner.username %></li>
   </ul>
-  <%= erb :'/votes/_voting'
+  <%= erb :'/votes/_voting' %>
   <ul class="question_tags"></ul>
 </section>
 <section class="answers">
   <div class="answers_header">
     <h3 class="answers_count">
+      <%= @question.answers.count %> Answers
     </h3>
     <ul class="answers_list">
       <% if @question.answers %>
-      <% @question.answers.each do |answer| %>
-      <%= erb :'/votes/_voting'
-      <li><% answer.description %><li>
-      <% end %>
+        <% @question.answers.each do |answer| %>
+          <%= erb :'/votes/_voting' %>
+          <li><%= answer.description %><li>
+        <% end %>
       <% end %>
     </ul>
   </div>
