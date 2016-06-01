@@ -5,6 +5,6 @@ class CreateTaggings < ActiveRecord::Migration
       t.integer :question_id
 
       t.timestamps null: false
-    end 
+    end
   end
 end
