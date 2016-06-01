@@ -5,14 +5,24 @@
   <div id="question-container" >
 
     <div id="box-container">
-      <p class="stat-boxes" id="stat-box-question"><%= question.votes.count %> <br>Votes</p>
-      <p class="stat-boxes" id="stat-box-answer"><%= question.answers.count %> <br>Answers</p>
-      <p class="stat-boxes" id="stat-box-view"><%= question.views_count.to_i %> <br>Views</p>
+        <div class="stat-boxes" id="stat-box-question">
+          <span class="value"><%= question.votes.count %></span><br>
+          <span class="word">votes</span>
+        </div>
+
+        <div class="stat-boxes" id="stat-box-answer">
+          <span class="value"><%= question.answers.count %> </span><br>
+          <span class="word">answers</span>
+          </div>
+        <div class="stat-boxes" id="stat-box-view">
+          <span class="value"><%= question.views_count.to_i %></span><br>
+          <span class="word">views</span>
+        </div>
     </div>
 
-    <div id="title-container">
+    <div class="title-container">
       <div id="qtitle"><%= question.title %></div>
-      <div class="under-title">asked by <%= question.questioner.username%> </div>
+      <div id="under-title">asked by <%= question.questioner.username%> </div>
         <% question.tags.each do |tag| %>
           <button type="button" class="tag"><%= tag.description %></button>
         <% end %>
