@@ -16,7 +16,7 @@
     <ul class="question-comments">
       <h3>Comments</h3>
       <% @question.comments.each do |comment| %>
-        <li> <%= comment.description %> <span class="question_stats">– <%= comment.commenter.username %> <%= comment.created_at.strftime("%b %d") %> at <%= comment.created_at.strftime("%l:%M") %></span></li><br>
+        <li> <%= comment.description %> <span class="question_stats">– <a href="/users/<%=comment.commenter.id %>"><%= comment.commenter.username %></a> <%= comment.created_at.strftime("%b %d") %> at <%= comment.created_at.strftime("%l:%M") %></span></li><br>
       <% end %>
     </ul>
 

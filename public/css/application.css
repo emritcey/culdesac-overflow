@@ -85,7 +85,7 @@ a {
   font-size: 13px;
 }
 
-input[type=text], input[type=password] {
+.login-container input[type=text], input[type=password] {
   margin: 10px;
   width: 250px;
   padding: 7px;
@@ -287,6 +287,38 @@ input[type=text], input[type=password] {
   font-size: 12px;
   padding: 5px;
   text-decoration: none;
+}
+
+.new-question-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0;
+}
+
+.new-question-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.new-question-label {
+  width: 30%;
+}
+
+.new-question-form input[type=text] {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.new-question-form textarea {
+  width: 100%;
+  height: 100px;
 }
 
 /*Color Palette*/
