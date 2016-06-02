@@ -22,8 +22,8 @@
     </a></div>
 
     <div class="title-container">
-      <div id="qtitle"><a href="/questions/<%= question.id %>"><%= question.title %></a></div>
-      <div id="under-title">asked by <a href="/users/:id"><%= question.questioner.username%></a> </div>
+      <div><a id="qtitle" href="/questions/<%= question.id %>"><%= question.title %></a></div>
+      <div id="under-title">asked __ seconds ago by <a href="/users/:id"><%= question.questioner.username%></a> </div>
         <% question.tags.each do |tag| %>
           <button type="button" class="tag"><%= tag.description %></button>
         <% end %>

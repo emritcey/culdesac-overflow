@@ -7,20 +7,21 @@ body {
 /* Home Page Elements*/
 h1 {
   font-size: 18px;
+  font-weight: normal;
+  color: #515052;
 }
 a {
-  color: #5F77CC;
   text-decoration: none;
 }
+
 #question-container {
   border-top: 1px solid lightgray;
-  max-width: 800px;
+  max-width: 620px;
 }
 
 #box-container {
   display: inline-block;
-  width: 300px;
-
+  width: 190px;
 }
 
 .stat-boxes {
@@ -44,10 +45,12 @@ a {
   display: inline-block;
 }
 #qtitle {
-  font-size: 20px;
+  color: #5F77CC;
+  text-decoration: none;
+  font-size: 17px;
 }
 #under-title {
-  font-size: 10px;
+  font-size: 12px;
   color: gray;
   text-align: right;
 }
@@ -55,7 +58,7 @@ a {
   border: 1px solid #B7E1FC;
   background: #B7E1FC;
   color: #495A64;
-  font-size: 14px;
+  font-size: 12px;
   padding: 5px;
   text-decoration: none;
 }
