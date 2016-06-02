@@ -2,49 +2,55 @@ body {
   max-width: 900px;
   margin: auto;
   background-color: #DCE1E3;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 /* Home Page Elements*/
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #515052;
+}
+a {
+  text-decoration: none;
+}
+
 #question-container {
-  border-top: 1px solid gray;
-  max-width: 800px;
+  border-top: 1px solid lightgray;
+  max-width: 620px;
 }
 
 #box-container {
-  /*border: 1px solid black;*/
   display: inline-block;
-  width: 300px;
-
+  width: 190px;
 }
 
 .stat-boxes {
   display: inline-block;
-  width: 90px;
-  /*border: 1px solid black;*/
+  width: 60px;
   text-align: center;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 .value {
   color: #CC6DF2;
-  font-size: 25px;
+  font-size: 18px;
 }
 .word{
   color: #05B3ED;
-  font-size: 15px;
+  font-size: 11px;
 }
 .title-container {
-  /*border: 1px solid black;*/
   width: 400px;
   display: inline-block;
-  /*margin-top: 25px;*/
-
 }
 #qtitle {
   color: #5F77CC;
-  font-size: 20px;
+  text-decoration: none;
+  font-size: 17px;
 }
 #under-title {
-  font-size: 10px;
+  font-size: 12px;
   color: gray;
   text-align: right;
 }
