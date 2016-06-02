@@ -1,3 +1,5 @@
+<h2><a href="<%= "/users/#{@user.id}" %>"><%= @user.username %></a></h2>
+
 <h3>Questions (<%= @user.questions.count %>)</h3>
 
 <% @questions.each do |question| %>
