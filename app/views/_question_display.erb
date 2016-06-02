@@ -2,7 +2,6 @@
 <div id="question-list-container">
 <% @questions.each do |question| %>
 
-
   <div id="question-container" >
 
     <div id="box-container"><a href="/questions/<%= question.id %>">
@@ -27,7 +26,6 @@
         <% question.tags.each do |tag| %>
           <a href="/<%= tag.id %>" type="button" class="tag"><%= tag.description %></a>
         <% end %>
-
     </div>
 
   </div>
