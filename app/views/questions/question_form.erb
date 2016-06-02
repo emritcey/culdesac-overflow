@@ -1,9 +1,13 @@
 <h3 class="new-question-heading">Your Question</h3>
 <form class="new-question-form" action="/questions/new" method="POST">
-  <label class="new-question-label" for="question_title">Title</label>
-  <input type="text" name="question[title]">
+  <div class="new-question-text-container">
+    <label class="new-question-label" for="question_title">Title</label>
+    <input type="text" name="question[title]">
+  </div>
   <textarea class="new-question-textbox" name="question[description]"></textarea>
-  <label for="question_tags">Tags</label>
-  <input type="text" name="tags">
+  <div class="new-question-text-container">
+    <label class="new-question-label" for="question_tags">Tags</label>
+    <input type="text" name="tags">
+  </div>
   <input type="submit" value="Post Your Question">
 </form>
