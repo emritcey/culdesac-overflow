@@ -10,7 +10,6 @@ get '/questions/:id' do
 end
 
 post '/questions/new' do
-
   @question = Question.new(params[:question])
   @question.user_id = current_user.id
   @question.views_count = 0
