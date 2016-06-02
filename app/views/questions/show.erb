@@ -1,0 +1,37 @@
+<section>
+  <h2 class="question_title">
+    <%= @question.title %>
+  </h2>
+  <p class="question_description">
+    <%= @question.description %>
+  </p>
+  <ul class="question_stats">
+    <li><%= @question.updated_at %></li>
+    <li><%= @question.questioner.username %></li>
+  </ul>
+  <%= erb :'/votes/_voting' %>
+  <ul class="question_tags"></ul>
+</section>
+<section class="answers">
+  <div class="answers_header">
+    <h3 class="answers_count">
+      <%= @question.answers.count %> Answers
+    </h3>
+    <ul class="answers_list">
+      <% if @question.answers %>
+        <% @question.answers.each do |answer| %>
+          <%= erb :'/votes/_voting' %>
+          <li><%= answer.description %><li>
+          <div class="answerer_username">
+            <%= answer.answerer.username %>
+          </div>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <h3 class="answer_form_heading">Your Answer</h3>
+  <form action="/questions/<%= @question.id %>" method="POST">
+    <textarea class="answer_textbox" name="answer_textbox"></textarea>
+    <input type="submit" value="Post Your Answer">
+  </form>
+</section>
