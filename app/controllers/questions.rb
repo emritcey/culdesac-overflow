@@ -1,3 +1,7 @@
+get '/questions/new' do
+  erb :'/questions/question_form'
+end
+
 get '/questions/:id' do
   @question = Question.find(params[:id])
   new_count = @question.views_count +=1
@@ -5,14 +9,14 @@ get '/questions/:id' do
   erb :'/questions/show'
 end
 
-post '/questions/:id' do
-  @question = Question.find(params[:id])
-  @answer = Question.create(question_id: @question.id, user_id: current_user.id, description: params[:answer_textbox])
-  erb :'/questions/show'
-end
+post '/questions/new' do
 
-get '/questions/new' do
-  erb :'/questions/new'
+  @question = Question.new(params[:question])
+  @question.user_id = current_user.id
+  @question.views_count = 0
+  @question.save
+  tags_titles = params[:tags].split(",")
+  redirect "/questions/#{@question.id}"
 end
 
 post '/questions/:id/comment' do
