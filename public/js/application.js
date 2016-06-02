@@ -38,6 +38,21 @@ $(document).ready(function() {
     });
   });
 
+  $(".user-contributions-link").click(function(event) {
+    event.preventDefault();
+    var url = $(this).attr('href');
+    var request = $.ajax({url: url});
+
+    request.done(function(listItems) {
+      var jsonList = JSON.parse(listItems);
+      var list = $('.contrib-list');
+      for(var i = 0; i < jsonList.length; i++) {
+        list.append("<li><p>" + jsonList[i].description + "</p></li>");
+      }
+    });
+  });
+
+
   // $(".answer-form").submit(function(e){
   //   e.preventDefault();
   //   var form = $(this);
@@ -50,7 +65,6 @@ $(document).ready(function() {
   //     $(".answers-list").append(`<li>${answer.description}<li><div class="answerer_username">${answer.username}</div>`);
   //     $(form).find(".answer_textbox").val('');
   //   });
-  });
 });
 
 

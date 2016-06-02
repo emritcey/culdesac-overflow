@@ -45,17 +45,29 @@ end
 get '/users/:user_id/answers' do
   @user = User.find_by(id: params[:user_id])
   @answers = @user.answers
-  erb :'answers/by_user'
+  if request.xhr?
+    @answers.to_json
+  else
+    erb :'answers/by_user'
+  end
 end
 
 get '/users/:user_id/questions' do
   @user = User.find_by(id: params[:user_id])
   @questions = @user.questions
-  erb :'questions/by_user'
+  if request.xhr?
+    @questions.to_json
+  else
+    erb :'questions/by_user'
+  end
 end
 
 get '/users/:user_id/votes' do
   @user = User.find_by(id: params[:user_id])
   @votes = @user.votes
-  erb :'votes/show'
+  if request.xhr?
+    @votes.to_json
+  else
+    erb :'votes/show'
+  end
 end
