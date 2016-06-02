@@ -193,6 +193,28 @@ input[type=text], input[type=password] {
     top: 55px;
 }
 
+#bigcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin-top: 20px;
+}
+
+#secondary-container{
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.second-bar {
+  background: #9FA6AD;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+.second-bar:hover{
+  background: lightblue;
+}
 
 /*upvote/downvote*/
 #thumbs-down {
