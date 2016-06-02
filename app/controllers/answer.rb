@@ -7,7 +7,7 @@ end
 
 post '/questions/:id/answers/:answer_id/favorite' do
   question = Question.find(params[:id])
-  question.update_attr(:favorite_answer_id, params[:answer_id])
+  question.update_attribute(:favorite_answer_id, params[:answer_id])
   if request.xhr?
     200
   else

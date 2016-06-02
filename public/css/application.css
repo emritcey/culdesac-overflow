@@ -167,6 +167,9 @@ a {
   background: none;
   border: none;
 }
+.star:focus {
+  outline: none;
+}
 .fa-star {
   color: #cfcfd1;
 }
