@@ -32,9 +32,5 @@
       <% end %>
     </ul>
   </div>
-  <h3 class="answer_form_heading">Your Answer</h3>
-  <form action="/questions/<%= @question.id %>" method="POST">
-    <textarea class="answer_textbox" name="answer_textbox"></textarea>
-    <input type="submit" value="Post Your Answer">
-  </form>
+  <%= erb :'/answers/_answer_form' %>
 </section>

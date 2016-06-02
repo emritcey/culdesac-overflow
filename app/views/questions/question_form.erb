@@ -1,0 +1,10 @@
+<h3 class="question_form_heading">Your Question</h3>
+<form action="/questions/<%= @question.id %>" method="POST">
+  <label for="question_title">Title</label>
+  <input type="text" name="question_title">
+  <textarea class="question_textbox" name="question_textbox"></textarea>
+  <input type="submit" value="Post Your Question">
+  <label for="question_tags">Tags</label>
+  <input type="text" name="question_tags">
+  <input type="submit" name="Post Your Question">
+</form>
