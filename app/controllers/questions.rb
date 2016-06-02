@@ -9,8 +9,3 @@ post '/questions/:id' do
   erb :'/questions/show'
 end
 
-get '/questions/users/:user_id' do
-  @user = User.find_by(id: params[:user_id])
-  @questions = @user.questions
-  erb :'questions/by_user'
-end

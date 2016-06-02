@@ -2,14 +2,14 @@
   width: 200px;
   height: 250px;
   float: left;
-  border: 1px solid hotpink;
+  border: 1px solid black;
   padding: 30px;
 }
 
-#avatar-placeholder {
+#avatar {
   height: 200px;
   width: 200px;
-  background-color: hotpink;
+  background-color: black;
   border: 1px solid black;
 }
 
