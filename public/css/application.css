@@ -62,3 +62,40 @@ a {
   padding: 5px;
   text-decoration: none;
 }
+
+/*Login Page*/
+.login-container {
+  margin: auto;
+  margin-top: 15px;
+  border: 1px solid #cfcfd1;
+  text-align: center;
+  padding: 30px;
+  width: 300px;
+  font-size: 13px;
+}
+
+input[type=text], input[type=password] {
+  margin: 10px;
+  width: 250px;
+  padding: 7px;
+  font-size: 15px;
+}
+
+#login {
+  text-align: center;
+  background: skyblue;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  width: 120px;
+  margin-bottom: 0;
+  margin-left: 150px;
+}
+
+
