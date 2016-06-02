@@ -4,8 +4,12 @@ post '/questions/:id/answers' do
   @answer.question_id = @question.id
   @answer.user_id = current_user.id
   @answer.save
-
-  redirect "/questions/#{@question.id}"
+  # if request.xhr?
+  #   content_type :json
+  #   {description: @answer.description, username: current_user.username}.to_json
+  # else
+    redirect "/questions/#{@question.id}"
+  # end
 end
 
 
