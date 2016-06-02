@@ -7,8 +7,10 @@ $(document).ready(function() {
   $('#thumbs-up').click(function(){
     $(this).css('color', 'red')
   });
-    $('#thumbs-down').click(function(){
+  
+  $('#thumbs-down').click(function(){
     $(this).css('color', 'red')
+  });
 
   $('form').submit(function(event) {
     event.preventDefault();
