@@ -14,11 +14,13 @@
 </div>
 
 <div class="user-activity">
-  <ul>
-    <li><a href="<%= "/users/#{@user.id}/answers" %>"><h3>Answers (<%= @user.answers.count %>)</h3></a></li>
+  <ul class="tabs">
+    <li class="active"><a class="user-contributions-link" href="/users/<%= @user.id %>/answers">Answers (<%= @user.answers.count %>)</a></li>
 
-    <li><a href="<%= "/users/#{@user.id}/questions" %>"><h3>Questions (<%= @user.questions.count %>)</h3></a></li>
+    <li><a class="user-contributions-link" href="/users/<%= @user.id %>/questions"> Questions (<%= @user.questions.count %>)</a></li>
 
-    <li><a href="<%= "/users/#{@user.id}/votes" %>"><h3>Votes Cast (<%= @user.votes.count %>)</h3></a></li>
+    <li><a class="user-contributions-link" href="/users/<%= @user.id %>/votes">Votes Cast (<%= @user.votes.count %>)</a></li>
   </ul>
+
+  <ul class="contrib-list"></ul>
 </div>
