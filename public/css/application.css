@@ -105,6 +105,7 @@ input[type=text], input[type=password] {
   margin-left: 150px;
 }
 
+
 /*Question Page*/
 .votebox {
   display: inline-block;
@@ -133,43 +134,71 @@ input[type=text], input[type=password] {
   margin-left: 50px;
 }
 
+/*Main page header========================================*/
 /*Top Bar Edits*/
+
+/*main header object*/
 ._topbar {
   padding-left: 0;
   display: inline-block;
   width: 1060px;
-}
-
-.js-topbar-dialog-corral {
-  display: inline-block;
   background-color: #098B8B;
-  width: 95%;
   margin: auto;
-
-}
-
-#logo-container{
-    vertical-align: top;
-    display: inline-block;
-
-}
-#logo {
   border: 1px solid black;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items:center;
+  position: relative;
+}
+
+#logo-container {
   vertical-align: top;
   height: 160px;
-  display: inline-block;
+  display: inline;
 }
 
-#inbox-rep-links {
-    vertical-align: middle;
-    /*padding: 10px;*/
-    display: inline-block;
+/* the logo itself */
+#logo {
+  border: 5px double #DCE1E3;
+  vertical-align: top;
+  height: 160px;
+  display: inline;
+}
+
+/* inbox and reputation links */
+.inbox-rep-links {
+    padding-left: 20px;
+    display: inline;
+    border: 1px solid black;
+}
+
+#inbox-icon {
+  color: #181B1B;
+}
+
+#reputation_and_badges-icon {
+  color: #181B1B;
+  padding-left: 10px;
+
+}
+
+/* signup/login/tour/help links */
+.signup-links {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
+    position: absolute;
+    right: 50px;
+    top: 55px;
 }
 
 
 /*Color Palette*/
 
 /* As hex codes */
+
+  /*background-color: #DCE1E3; */
 
 .color-primary-0 { color: #226666 } /* Main Primary color */
 .color-primary-1 { color: #00C8C8 } /*light*/
@@ -185,6 +214,4 @@ input[type=text], input[type=password] {
 .rgba-primary-2 { color: rgba(  9,139,139,1) }
 .rgba-primary-3 { color: rgba( 39, 65, 65,1) }
 .rgba-primary-4 { color: rgba( 24, 27, 27,1) }
-
->>>>>>> fa238ef59696c1ec10fffa411f94b33504a6af53
 

@@ -1,0 +1,11 @@
+<h2><a href="<%= "/users/#{@user.id}" %>"><%= @user.username %></a></h2>
+
+<h3>Votes (<%= @user.votes.count %>)</h3>
+
+<% @votes.each do |vote| %>
+  <% if vote.votable_type == 'Answer' %>
+    <b><a href="<%= "/questions/#{vote.votable.question_id}" %>"><%= vote.get_votable_preview %></a></b><br><br>
+  <% elsif vote.votable_type == 'Question' %>
+    <b><a href="<%= "/questions/#{vote.votable_id}" %>"><%= vote.get_votable_preview %></a></b><br><br>
+  <% end %>
+<% end %>
