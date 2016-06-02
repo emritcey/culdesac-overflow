@@ -32,6 +32,25 @@ a {
   padding-bottom: 20px;
 }
 
+
+#question-container {
+  border-top: 1px solid lightgray;
+  max-width: 620px;
+}
+
+#box-container {
+  display: inline-block;
+  width: 190px;
+}
+
+.stat-boxes {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .value {
   color: #CC6DF2;
   font-size: 18px;
@@ -142,7 +161,6 @@ input[type=text], input[type=password] {
 .color-primary-4 { color: #181B1B } /*darkest*/
 
 
-
 /* As RGBa codes */
 
 .rgba-primary-0 { color: rgba( 34,102,102,1) }  /* Main Primary color */
@@ -150,4 +168,5 @@ input[type=text], input[type=password] {
 .rgba-primary-2 { color: rgba(  9,139,139,1) }
 .rgba-primary-3 { color: rgba( 39, 65, 65,1) }
 .rgba-primary-4 { color: rgba( 24, 27, 27,1) }
+
 
