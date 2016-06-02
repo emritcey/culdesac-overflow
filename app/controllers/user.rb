@@ -1,17 +1,20 @@
 enable :sessions
 
-get '/session-viewer' do 
+get '/session-viewer' do
   session.inspect
 end
 
+#page for list of all users
 get '/users' do
   erb :'users/index'
 end
 
-get '/users/new' do 
+#registration page
+get '/users/new' do
   erb :'users/new'
 end
 
+#registration working
 post '/users' do
   user = User.new(params[:user])
 
@@ -23,16 +26,17 @@ post '/users' do
   end
 end
 
-get '/users/login' do 
+#login page
+get '/users/login' do
   erb :'users/login'
 end
-
+#autheticate login
 get '/users/:id' do
   @user = User.find(params[:id])
   erb :'users/show'
 end
-
-delete '/users/logout' do 
+#logout
+delete '/users/logout' do
   session.clear
   erb :'users/logout'
 end
