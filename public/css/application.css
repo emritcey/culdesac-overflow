@@ -4,6 +4,7 @@ body {
   background-color: #DCE1E3;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 /* Home Page Elements*/
 h1 {
   font-size: 18px;
@@ -73,7 +74,7 @@ a {
   text-decoration: none;
 }
 
-/*Login Page*/
+/*Login/Reg Page*/
 .login-container {
   margin: auto;
   margin-top: 15px;
@@ -91,7 +92,7 @@ input[type=text], input[type=password] {
   font-size: 15px;
 }
 
-#login {
+#enter-button {
   text-align: center;
   background: skyblue;
   border: none;
@@ -108,6 +109,10 @@ input[type=text], input[type=password] {
   margin-left: 150px;
 }
 
+.reglabel {
+  margin-left: 0;
+
+}
 
 /*Question Page*/
 .votebox {

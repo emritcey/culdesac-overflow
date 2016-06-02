@@ -1,22 +1,21 @@
-<div class="regpage">
-  <h1>User Registration Page</h1>
-  <p>Please enter your information below:</p>
+<div class="login-container">
   <% if @errors %>
     <% @errors.each do |error| %>
       <p class="error"> <%= error %></p>
     <% end %>
   <% end %>
 <p>
-   <form method="post" action="/users">
-<label for="username">Username:</label>
+
+  <form method="post" action="/users">
+    <label class="reglabel" for="username">Enter Username:</label>
     <input id="username_input" name="user[username]" type="text" value="<%= @user.try(:username) %>" placeholder="username">
 </p>
 <p>
-    <label for="password">Password:</label>
+    <label class="reglabel" for="password">Enter Password:</label>
     <input id="password_input" name="user[password]" type="password" placeholder="*********">
 </p>
 <p>
-    <input type="submit" value="Sign Up" class="button">
+    <input id="enter-button"  type="submit" value="Sign Up" class="button">
   </form>
 </p>
 </div>
