@@ -1,17 +1,21 @@
 <section>
-  <h2 class="question_title">
+  <h1 class="question_title">
     <%= @question.title %>
-  </h2>
+  </h1>
+
   <p class="question_description">
     <%= @question.description %>
   </p>
+
   <ul class="question_stats">
     <li><%= @question.updated_at %></li>
     <li><%= @question.questioner.username %></li>
   </ul>
-  <%= erb :'/votes/_voting' %>
-  <ul class="question_tags"></ul>
+  <div class=><%= erb :'/votes/_voting' %></div>
+  <!-- <ul class="question_tags"></ul> -->
+
 </section>
+
 <section class="answers">
   <div class="answers_header">
     <h3 class="answers_count">

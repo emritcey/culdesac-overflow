@@ -14,6 +14,7 @@ a {
   text-decoration: none;
 }
 
+
 #question-container {
   border-top: 1px solid lightgray;
   max-width: 620px;
@@ -49,6 +50,10 @@ a {
   text-decoration: none;
   font-size: 17px;
 }
+#qtitle:hover {
+  color: lightblue;
+}
+
 #under-title {
   font-size: 12px;
   color: gray;
@@ -98,4 +103,9 @@ input[type=text], input[type=password] {
   margin-left: 150px;
 }
 
+/*Question Page*/
+.question_description {
+  border-bottom: 1px solid #cfcfd1;
+  border-top: 1px solid #cfcfd1;
+}
 
