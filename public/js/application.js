@@ -28,4 +28,17 @@ $(document).ready(function() {
       $(form).find('.comment_textbox').val('');
     });
   });
+
+  $(".fa-star").click(function(){
+    var form = $(this)
+    var url = form.attr('action')
+    var method = form.attr('method')
+    var request = $.ajax({url: url, method: method})
+
+    request.done(function(){
+      $(form).css('color', 'green');
+    });
+  });
 });
+
+
