@@ -6,7 +6,8 @@ end
 
 #page for list of all users
 get '/users' do
-  erb :'users/index'
+  @users = User.order(:id).all
+  erb :'users/show-all'
 end
 
 #registration page
@@ -53,7 +54,7 @@ get '/users/:user_id/questions' do
   erb :'questions/by_user'
 end
 
-get '/users/:user_id/votes' do 
+get '/users/:user_id/votes' do
   @user = User.find_by(id: params[:user_id])
   @votes = @user.votes
   erb :'votes/show'
