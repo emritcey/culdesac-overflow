@@ -20,8 +20,7 @@
       <% end %>
     </ul>
 
-    <p>add comment</p>
-    <form action="/questions/<%= @question.id %>/comment" method="POST">
+    <form class="comment-form" action="/questions/<%= @question.id %>/comment" method="POST">
       <textarea class="comment_textbox" name="comment_textbox"></textarea>
       <input type="submit" value="add comment">
     </form>
@@ -38,23 +37,7 @@
       <%= @question.answers.count %> Answers
     </h3>
     <ul class="answers_list">
-      <% if @question.answers %>
-        <% @question.answers.each do |answer| %>
-          <%= erb :'/votes/_voting' %>
-          <% if @question.favorite_answer_id == answer.id %>
-              <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
-          <% else  %>
-              <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/favorite" method="POST">
-                 <button class="star" type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
-              </form>
-          <% end  %>
-
-          <li><%= answer.description %><li>
-          <div class="answerer_username">
-            <%= answer.answerer.username %>
-          </div>
-        <% end %>
-      <% end %>
+      <%= erb :"/answers/_answers" %>
     </ul>
   </div>
   <%= erb :'/answers/_answer_form' %>
