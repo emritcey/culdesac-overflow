@@ -1,5 +1,7 @@
 get '/questions/:id' do
   @question = Question.find(params[:id])
+  new_count = @question.views_count +=1
+  @question.update_attribute(:views_count, new_count)
   erb :'/questions/show'
 end
 
