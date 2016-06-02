@@ -32,6 +32,25 @@ a {
   padding-bottom: 20px;
 }
 
+
+#question-container {
+  border-top: 1px solid lightgray;
+  max-width: 620px;
+}
+
+#box-container {
+  display: inline-block;
+  width: 190px;
+}
+
+.stat-boxes {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .value {
   color: #CC6DF2;
   font-size: 18px;
@@ -97,5 +116,57 @@ input[type=text], input[type=password] {
   margin-bottom: 0;
   margin-left: 150px;
 }
+
+._topbar {
+  padding-left: 0;
+  display: inline-block;
+  width: 1060px;
+}
+
+.js-topbar-dialog-corral {
+  display: inline-block;
+  background-color: #098B8B;
+  width: 95%;
+  margin: auto;
+
+}
+
+#logo-container{
+    vertical-align: top;
+    display: inline-block;
+
+}
+#logo {
+  border: 1px solid black;
+  vertical-align: top;
+  height: 160px;
+  display: inline-block;
+}
+
+#inbox-rep-links {
+    vertical-align: middle;
+    /*padding: 10px;*/
+    display: inline-block;
+}
+
+
+/*Color Palette*/
+
+/* As hex codes */
+
+.color-primary-0 { color: #226666 } /* Main Primary color */
+.color-primary-1 { color: #00C8C8 } /*light*/
+.color-primary-2 { color: #098B8B } /*med light*/
+.color-primary-3 { color: #274141 } /*med dark*/
+.color-primary-4 { color: #181B1B } /*darkest*/
+
+
+/* As RGBa codes */
+
+.rgba-primary-0 { color: rgba( 34,102,102,1) }  /* Main Primary color */
+.rgba-primary-1 { color: rgba(  0,200,200,1) }
+.rgba-primary-2 { color: rgba(  9,139,139,1) }
+.rgba-primary-3 { color: rgba( 39, 65, 65,1) }
+.rgba-primary-4 { color: rgba( 24, 27, 27,1) }
 
 
