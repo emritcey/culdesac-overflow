@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('#thumbs-up').click(function(){
     $(this).css('color', 'red')
   });
-  
+
   $('#thumbs-down').click(function(){
     $(this).css('color', 'red')
   });
