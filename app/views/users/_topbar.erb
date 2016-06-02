@@ -1,33 +1,22 @@
 <div class="_topbar">
-    <div class="js-topbar-dialog-corral">
+    <div id="logo-container">
+        <a href="/"><img id="logo" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png"></a>
+    </div>
 
-        <div class="header">
-            <div id="logo-container">
-                <img id="logo" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png">
-            </div>
+    <div class="inbox-rep-links">
+        <a href="#" id="inbox-icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
+        <a href="" id="reputation_and_badges-icon"><i class="fa fa-trophy fa-3x" aria-hidden="true"></i></a>
+    </div>
 
-<!--             <h3><a href="/">Cul de Sac Overflow</a></h3>
- -->
-            <div id="inbox-rep-links">
-                <a href="#" id="inbox-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-                <a href="" id="reputation_and_badges"><i class="fa fa-trophy" aria-hidden="true"></i></a>
-            </div>
 
-        </div>
-
-        <div class="topbar-links">
-            <div class="links-container">
-                <span class="topbar-menu-links">
-                    <a href="/users/new">sign up</a>
-                    <% if logged_in? %>
-                    <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
-                    <% else %>
-                    <a href="/users/login">log in</a>
-                    <% end %>
-                    <a href="">tour</a>
-                    <a href="">help</a>
-                </span>
-            </div>
-        </div>
+    <div class="signup-links">
+        <a href="/users/new">sign up</a>
+        <% if logged_in? %>
+        <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+        <% else %>
+        <a href="/users/login">log in</a>
+        <% end %>
+        <!-- <a href="">tour</a>
+        <a href="">help</a> -->
     </div>
 </div>
