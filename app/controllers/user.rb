@@ -45,12 +45,6 @@ get '/users/:user_id/questions' do
   erb :'users/show_questions'
 end
 
-get '/users/:user_id/votes' do
-  @user = User.find_by(id: params[:user_id])
-  @votes = @user.votes
-  erb :'users/show_votes'
-end
-
 delete '/users/logout' do 
   session.clear
   erb :'users/logout'
