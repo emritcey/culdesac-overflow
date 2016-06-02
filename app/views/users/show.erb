@@ -1,6 +1,5 @@
 <div class='avatar-container'>
-  <div id='avatar-placeholder'>
-  </div>
+    <img id="avatar" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/generic_avatar.png" alt="cul-de-sac avatar">
 </div>
 
 <div class="user-info-container">
@@ -16,10 +15,10 @@
 
 <div class="user-activity">
   <ul>
-    <li><a href="<%= "/answers/users/#{@user.id}" %>"><h3>Answers (<%= @user.answers.count %>)</h3></a></li>
+    <li><a href="<%= "/users/#{@user.id}/answers" %>"><h3>Answers (<%= @user.answers.count %>)</h3></a></li>
 
-    <li><a href="<%= "/questions/users/#{@user.id}" %>"><h3>Questions (<%= @user.questions.count %>)</h3></a></li>
+    <li><a href="<%= "/users/#{@user.id}/questions" %>"><h3>Questions (<%= @user.questions.count %>)</h3></a></li>
 
-    <li><a href="<%= "/votes/users/#{@user.id}" %>"><h3>Votes Cast (<%= @user.votes.count %>)</h3></a></li>
+    <li><a href="<%= "/users/#{@user.id}/votes" %>"><h3>Votes Cast (<%= @user.votes.count %>)</h3></a></li>
   </ul>
 </div>

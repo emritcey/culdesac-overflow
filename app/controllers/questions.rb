@@ -1,5 +1,7 @@
 get '/questions/:id' do
   @question = Question.find(params[:id])
+  new_count = @question.views_count +=1
+  @question.update_attribute(:views_count, new_count)
   erb :'/questions/show'
 end
 
@@ -9,8 +11,3 @@ post '/questions/:id' do
   erb :'/questions/show'
 end
 
-get '/questions/users/:user_id' do
-  @user = User.find_by(id: params[:user_id])
-  @questions = @user.questions
-  erb :'questions/by_user'
-end

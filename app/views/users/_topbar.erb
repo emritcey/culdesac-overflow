@@ -7,12 +7,15 @@
 
 
     <div class="signup-links">
-        <a href="/users/new" id="signup-link">sign up</a>
-        <% if logged_in? %>
-        <a href="/users/<%= current_user.id %>" id="login-link"><%= current_user.username %></a>
-        <% else %>
-        <a href="/users/login">log in</a>
-        <% end %>
+      <% if logged_in? %>
+          <a href="/users/<%= current_user.id %>">hey, <%= current_user.username %></a> |
+          <a href="/users/logout">logout</a> |
+          <a href="/index">home</a>
+      <% else %>
+          <a href="/users/new">sign up</a> |
+          <a href="/users/login">log in</a> |
+          <a href="/">home</a>
+      <% end %>
         <!-- <a href="">tour</a>
         <a href="">help</a> -->
     </div>

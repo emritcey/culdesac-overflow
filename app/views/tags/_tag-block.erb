@@ -1,0 +1,5 @@
+<% @tags.each do |tag| %>
+<a href="/18" class="tag"><%= tag.description %></a>
+<span class="tag-count">x <%= @taggings.where(tag_id: tag.id).count %></span>
+<p class="tag-description-long">We should add this field to the tables and model of the tags if we have time</p>
+<% end %>
