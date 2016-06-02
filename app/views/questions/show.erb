@@ -45,7 +45,7 @@
               <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
           <% else  %>
               <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/favorite" method="POST">
-                 <button type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
+                 <button class="star" type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
               </form>
           <% end  %>
 

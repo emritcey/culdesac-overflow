@@ -36,7 +36,7 @@ $(document).ready(function() {
     var request = $.ajax({url: url, method: method})
 
     request.done(function(){
-      $(form).css('background-color', 'green');
+      $(form).css('color', 'green');
     });
   });
 });

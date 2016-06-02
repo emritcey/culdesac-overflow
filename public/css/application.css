@@ -163,6 +163,10 @@ a {
   margin-left: 50px;
 }
 
+.star {
+  background: none;
+  border: none;
+}
 .fa-star {
   color: #cfcfd1;
 }
