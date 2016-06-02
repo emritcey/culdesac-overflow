@@ -1,0 +1,80 @@
+.avatar-container {
+  width: 200px;
+  height: 250px;
+  float: left;
+  border: 1px solid hotpink;
+  padding: 30px;
+}
+
+#avatar-placeholder {
+  height: 200px;
+  width: 200px;
+  background-color: hotpink;
+  border: 1px solid black;
+}
+
+.user-info-container {
+  width: 600px;
+  float: right;
+  margin-bottom: 100px;
+}
+
+.user-info {
+  width: 330px;
+  float: left;
+}
+
+.user-activity {
+  margin: 100px auto;
+  width: 60%;
+}
+
+.user-activity ul {
+  list-style-type: none;
+}
+
+.user-activity li {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+h1 {
+  color: black;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+#ranking {
+  background-color: #0077cc;
+  color: white;
+  font-size: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.profile-title {
+  color: #666;
+  font-size: 19px;
+}
+
+.profile-last-updated {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.profile-quote {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.profile-experience {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px 0;
+}
+
+.user-stats-container {
+  width: 200px;
+  float: right;
+}
