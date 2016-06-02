@@ -11,6 +11,22 @@
     <li class="question_stats">edited <%= @question.updated_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
     <li class="question_stats"><a href="/users/<%=@question.questioner.id %>"><%= @question.questioner.username %></a></li>
   </ul>
+  <div class="all-question-comments">
+
+    <ul class="question-comments">
+      <h3>Comments</h3>
+      <% @question.comments.each do |comment| %>
+        <li> <%= comment.description %> <span class="question_stats">– <%= comment.commenter.username %> <%= comment.created_at.strftime("%b %d") %> at <%= comment.created_at.strftime("%l:%M") %></span></li><br>
+      <% end %>
+    </ul>
+
+    <p>add comment</p>
+    <form action="/questions/<%= @question.id %>/comment" method="POST">
+      <textarea class="comment_textbox" name="comment_textbox"></textarea>
+      <input type="submit" value="add comment">
+    </form>
+
+  </div> 
 
   <!-- <ul class="question_tags"></ul> -->
 </section>
