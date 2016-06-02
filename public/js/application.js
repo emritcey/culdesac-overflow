@@ -51,7 +51,8 @@ $(document).ready(function() {
       list.append("<div class='tab-content'></div>");
       tabContent = "";
       for(var i = 0; i < jsonList.length; i++) {
-        tabContent += "<li class='user-contributions-li'><p>" + jsonList[i].description + "</p></li>";
+
+          tabContent += "<li class='user-contributions-li'><p>" + jsonList[i].description + "</p></li>";
       }
       list.html(tabContent);
     });
