@@ -41,3 +41,20 @@ delete '/users/logout' do
   erb :'/index'
 end
 
+get '/users/:user_id/answers' do
+  @user = User.find_by(id: params[:user_id])
+  @answers = @user.answers
+  erb :'answers/by_user'
+end
+
+get '/users/:user_id/questions' do
+  @user = User.find_by(id: params[:user_id])
+  @questions = @user.questions
+  erb :'questions/by_user'
+end
+
+get '/users/:user_id/votes' do 
+  @user = User.find_by(id: params[:user_id])
+  @votes = @user.votes
+  erb :'votes/show'
+end
