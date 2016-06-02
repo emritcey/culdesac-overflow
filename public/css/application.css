@@ -111,8 +111,8 @@ input[type=text], input[type=password] {
 
 .reglabel {
   margin-left: 0;
-
 }
+
 /*All Users Show Page */
 .avatar {
   width: 120px;
@@ -130,11 +130,12 @@ input[type=text], input[type=password] {
   height: 150px;
   margin-bottom: 5px;
 }
+
 .user-name {
   color: gray;
 }
 
-/*Question Page*/
+/*Single Question Page*/
 .votebox {
   display: inline-block;
   vertical-align: top;
@@ -162,6 +163,13 @@ input[type=text], input[type=password] {
   margin-left: 50px;
 }
 
+.fa-star {
+  color: #cfcfd1;
+}
+
+.green-star {
+  color: green;
+}
 /*Main page header========================================*/
 /*Top Bar Edits*/
 

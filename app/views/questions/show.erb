@@ -26,10 +26,11 @@
       <input type="submit" value="add comment">
     </form>
 
-  </div> 
+  </div>
 
   <!-- <ul class="question_tags"></ul> -->
 </section>
+
 
 <section class="answers">
   <div class="answers_header">
@@ -40,6 +41,14 @@
       <% if @question.answers %>
         <% @question.answers.each do |answer| %>
           <%= erb :'/votes/_voting' %>
+          <% if @question.favorite_answer_id == answer.id %>
+              <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
+          <% else  %>
+              <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/favorite" method="POST">
+                 <button type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
+              </form>
+          <% end  %>
+
           <li><%= answer.description %><li>
           <div class="answerer_username">
             <%= answer.answerer.username %>
