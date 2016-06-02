@@ -27,8 +27,8 @@ get '/users/login' do
   erb :'users/login'
 end
 
-get '/users/:user_id' do
-  @user = User.find_by(id: params[:user_id])
+get '/users/:id' do
+  @user = User.find(params[:id])
   erb :'users/show'
 end
 
