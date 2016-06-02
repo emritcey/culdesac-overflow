@@ -1,7 +1,4 @@
 <div class="_topbar">
-    <div id="logo-container">
-        <a href="/"><img id="logo" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png"></a>
-    </div>
 
     <div class="inbox-rep-links">
         <a href="#" id="inbox-icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
@@ -10,9 +7,9 @@
 
 
     <div class="signup-links">
-        <a href="/users/new">sign up</a>
+        <a href="/users/new" id="signup-link">sign up</a>
         <% if logged_in? %>
-        <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+        <a href="/users/<%= current_user.id %>" id="login-link"><%= current_user.username %></a>
         <% else %>
         <a href="/users/login">log in</a>
         <% end %>
