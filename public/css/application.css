@@ -108,7 +108,9 @@ input[type=text], input[type=password] {
 /*Question Page*/
 .votebox {
   display: inline-block;
-  width: 100px;
+  vertical-align: top;
+  padding: 7px;
+  margin-top: 17px;
 }
 
 .question_description {
@@ -116,12 +118,19 @@ input[type=text], input[type=password] {
   width: 500px;
   border-bottom: 1px solid #cfcfd1;
   border-top: 1px solid #cfcfd1;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.3;
 }
 
 .question_stats {
   list-style: none;
   border: 1px solid pink;
   display: inline-block;
+  font-size: 11px;
+}
+#tagbox {
+  margin-left: 50px;
 }
 
 /*Top Bar Edits*/

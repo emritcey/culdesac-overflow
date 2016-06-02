@@ -3,25 +3,26 @@
   <div class="votebox"><%= erb :'/votes/_voting' %></div>
   <p class="question_description"><%= @question.description %></p>
 
+  <p id="tagbox"> <% @question.tags.each do |tag| %>
+          <a href="/<%= tag.id %>"  class="tag"><%= tag.description %></a>
+        <% end %></p>
   <ul>
     <li class="question_stats">asked <%= @question.created_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
     <li class="question_stats">edited <%= @question.updated_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
-    <li class="question_stats"><%= @question.questioner.username %></li>
+    <li class="question_stats"><a href="/users/<%=@question.questioner.id %>"><%= @question.questioner.username %></a></li>
   </ul>
 
   <!-- <ul class="question_tags"></ul> -->
-
 </section>
 
 <section class="answers">
   <div class="answers_header">
-    <h3 class="answers_count">
-      <%= @question.answers.count %> Answers
-    </h3>
+    <%= erb :'/votes/_voting' %>
+    <h3 class="answers_count"><%= @question.answers.count %> Answers</h3>
     <ul class="answers_list">
       <% if @question.answers %>
         <% @question.answers.each do |answer| %>
-          <%= erb :'/votes/_voting' %>
+
           <li><%= answer.description %><li>
         <% end %>
       <% end %>
