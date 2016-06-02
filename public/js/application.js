@@ -40,15 +40,20 @@ $(document).ready(function() {
 
   $(".user-contributions-link").click(function(event) {
     event.preventDefault();
+    $(".tabs > li").removeClass("active");
+    $(this).parent().addClass("active");
     var url = $(this).attr('href');
     var request = $.ajax({url: url});
 
     request.done(function(listItems) {
       var jsonList = JSON.parse(listItems);
       var list = $('.contrib-list');
+      list.append("<div class='tab-content'></div>");
+      tabContent = "";
       for(var i = 0; i < jsonList.length; i++) {
-        list.append("<li><p>" + jsonList[i].description + "</p></li>");
+        tabContent += "<li class='user-contributions-li'><p>" + jsonList[i].description + "</p></li>";
       }
+      list.html(tabContent);
     });
   });
 
