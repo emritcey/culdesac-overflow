@@ -67,8 +67,7 @@ a {
 .login-container {
   margin: auto;
   margin-top: 15px;
-  border: 1px solid gray;
-  border-radius: 3px;
+  border: 1px solid #cfcfd1;
   text-align: center;
   padding: 30px;
   width: 300px;
