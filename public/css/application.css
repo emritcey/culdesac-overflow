@@ -38,14 +38,17 @@ a {
   color: #CC6DF2;
   font-size: 18px;
 }
+
 .word{
   color: #05B3ED;
   font-size: 11px;
 }
+
 .title-container {
   width: 400px;
   display: inline-block;
 }
+
 #qtitle {
   color: #5F77CC;
   text-decoration: none;
@@ -190,6 +193,7 @@ input[type=text], input[type=password] {
     top: 55px;
 }
 
+
 /*upvote/downvote*/
 #thumbs-down {
   color: #098B8B;
@@ -197,6 +201,37 @@ input[type=text], input[type=password] {
 
 #thumbs-up {
   color: #098B8B;
+}
+
+.tags-header {
+  width: 85%;
+  margin: auto;
+}
+
+.tags-section {
+  margin: 20px 0;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+
+.tag-block {
+  width: 150px;
+  margin: auto;
+}
+
+.tag-box {
+  border: 1px solid #B7E1FC;
+  background: #B7E1FC;
+  color: #495A64;
+  font-size: 12px;
+  padding: 5px;
+  text-decoration: none;
 }
 
 /*Color Palette*/
