@@ -113,6 +113,26 @@ input[type=text], input[type=password] {
   margin-left: 0;
 
 }
+/*All Users Show Page */
+.avatar {
+  width: 120px;
+}
+.users-grid {
+  width: 800px;
+}
+.user-block {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-size: 15px;
+  border: 2px solid #cfcfd1;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+.user-name {
+  color: gray;
+}
 
 /*Question Page*/
 .votebox {

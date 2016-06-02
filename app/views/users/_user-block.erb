@@ -1,8 +1,10 @@
+<div class="users-grid">
 <% @users.each do |user| %>
 
-<div class="user-block">
-  <a href="/users/<%= user.id %>" class="user-box"><%= user.username %></a>
-  <p class="user-description-long"></p>
-</div>
+  <div class="user-block">
+    <a href="/users/<%= user.id %>"><img class="avatar" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png"></a><br>
+    <a href="/users/<%= user.id %>" class="user-name"><%= user.username %></a>
+  </div>
 
-<% end %>ß
+<% end %>
+</div>
