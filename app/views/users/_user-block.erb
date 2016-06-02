@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+
+<div class="user-block">
+  <a href="/users/<%= user.id %>" class="user-box"><%= user.username %></a>
+  <p class="user-description-long"></p>
+</div>
+
+<% end %>ß
