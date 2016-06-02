@@ -38,6 +38,6 @@ end
 #logout
 delete '/users/logout' do
   session.clear
-  erb :'users/logout'
+  erb :'/index'
 end
 
