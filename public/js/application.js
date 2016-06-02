@@ -38,6 +38,10 @@ $(document).ready(function() {
     });
   });
 
+
+
+
+
   // $(".answer-form").submit(function(e){
   //   e.preventDefault();
   //   var form = $(this);
@@ -50,7 +54,6 @@ $(document).ready(function() {
   //     $(".answers-list").append(`<li>${answer.description}<li><div class="answerer_username">${answer.username}</div>`);
   //     $(form).find(".answer_textbox").val('');
   //   });
-  });
 });
 
 

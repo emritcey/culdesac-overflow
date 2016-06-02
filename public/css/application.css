@@ -177,6 +177,10 @@ a {
 .green-star {
   color: green;
 }
+
+.new_comment_form {
+  display: none;
+}
 /*Main page header========================================*/
 /*Top Bar Edits*/
 

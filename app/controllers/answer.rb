@@ -23,3 +23,18 @@ post '/questions/:id/answers/:answer_id/favorite' do
   end
 end
 
+post '/questions/:id/answers/:answer_id/comment' do
+  @question = Question.find(params[:id])
+  @answer = Answer.find(params[:answer_id])
+  @comment = Comment.create(user_id: current_user.id, description: params[:comment_text], commentable_type: "Answer", commentable_id: params[:answer_id])
+  if request.xhr?
+    p "XHR"
+    content_type :json
+    {username: @comment.commenter.username, user_id: @comment.user_id, description: @comment.description, created_at: @comment.created_at.strftime("%b %d"), time: @comment.created_at.strftime("%l:%M")}.to_json
+  else
+    p 'DEFIONITELY NOT '
+    erb :'/questions/show'
+  end
+end
+
+

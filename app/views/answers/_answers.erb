@@ -1,25 +1,17 @@
 <% if @question.answers %>
-        <% @question.answers.each do |answer| %>
-          <%= erb :'/votes/_voting' %>
-          <% if @question.favorite_answer_id == answer.id %>
-              <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
-          <% else  %>
-              <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/favorite" method="POST">
-                 <button class="star" type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
-              </form>
-          <% end  %>
-
-          <li><%= answer.description %></li>
-          <div class="answerer_username">
-            <%= answer.answerer.username %>
-          </div>
-          <button id="new_comment_button" class="button center">New Comment</button>
-          <form id="new_comment_form" class="center hidden">
-            <label for="comment_text">Comment:</label>
-            <textarea id="comment_text" name="comment_text"></textarea>
-            <label for="commenter_name">Name:</label>
-            <input type="text" id="commenter_name" name="commenter_name"></input>
-            <input type="submit" class="button" value="Submit Comment"></input>
+    <% @question.answers.each do |answer| %>
+      <%= erb :'/votes/_voting' %>
+      <% if @question.favorite_answer_id == answer.id %>
+          <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
+      <% else  %>
+          <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/favorite" method="POST">
+             <button class="star" type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
           </form>
-        <% end %>
-      <% end %>
+      <% end  %>
+
+      <li><%= answer.description %></li>
+      <div class="answerer_username">
+        <%= answer.answerer.username %>
+      </div>
+  <% end %>
+<% end %>
