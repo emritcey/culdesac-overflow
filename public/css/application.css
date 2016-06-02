@@ -144,7 +144,6 @@ input[type=text], input[type=password] {
   width: 1060px;
   background-color: #098B8B;
   margin: auto;
-  border: 1px solid black;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -170,7 +169,6 @@ input[type=text], input[type=password] {
 .inbox-rep-links {
     padding-left: 20px;
     display: inline;
-    border: 1px solid black;
 }
 
 #inbox-icon {
@@ -185,7 +183,6 @@ input[type=text], input[type=password] {
 
 /* signup/login/tour/help links */
 .signup-links {
-    border: 1px solid black;
     padding: 10px;
     vertical-align: top;
     position: absolute;
@@ -193,6 +190,14 @@ input[type=text], input[type=password] {
     top: 55px;
 }
 
+/*upvote/downvote*/
+#thumbs-down {
+  color: #098B8B;
+}
+
+#thumbs-up {
+  color: #098B8B;
+}
 
 /*Color Palette*/
 
