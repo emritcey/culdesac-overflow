@@ -26,7 +26,7 @@
       <input type="submit" value="add comment">
     </form>
 
-  </div> 
+  </div>
 
   <!-- <ul class="question_tags"></ul> -->
 </section>
@@ -39,7 +39,6 @@
     <ul class="answers_list">
       <% if @question.answers %>
         <% @question.answers.each do |answer| %>
-          <%= erb :'/votes/_voting' %>
           <li><%= answer.description %><li>
           <div class="answerer_username">
             <%= answer.answerer.username %>

@@ -242,11 +242,7 @@ a {
 }
 
 /*upvote/downvote*/
-#thumbs-down {
-  color: #098B8B;
-}
-
-#thumbs-up {
+.vote-forms {
   color: #098B8B;
 }
 
