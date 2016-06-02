@@ -1,0 +1,13 @@
+<header class="tags-header">
+<h2 class="tags-title">Tags</h2>
+<ul class="tags-tabs">
+
+</ul>
+<p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right tags makes it easier for others to find and answer your question.</p>
+<form class="tags-search" action="/tags/:id" method="GET">
+  <label for="tags_search">Type to find tags:</label>
+  <input type="text" name="tags_search">
+</form>
+</header>
+<%= erb :'tags/_tag-block' %>
+
