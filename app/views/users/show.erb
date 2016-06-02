@@ -1,0 +1,14 @@
+<div class='avatar-container'>
+  <img src="culdesac-overflow/public/imgs/generic_avatar.png" alt="cul-de-sac avatar">
+</div>
+
+<%= @user.username %>
+
+<a href="<%= "/users/#{@user.id}/answers" %>"><h3>Answers (<%= @user.answers.count %>)</h3></a>
+
+<a href="<%= "/users/#{@user.id}/questions" %>"><h3>Questions (<%= @user.questions.count %>)</h3></a>
+
+<a href="<%= "/users/#{@user.id}/votes" %>"><h3>Votes Cast (<%= @user.votes.count %>)</h3></a>
+
+
+

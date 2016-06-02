@@ -1,0 +1,5 @@
+<h3>Votes (<%= @user.votes.count %>)</h3>
+
+<% @votes.each do |vote| %>
+  <b><a href="<%= "/votes/#{vote.id}" %>"><%= vote.get_votable_object %></a></b><br><br>
+<% end %>
