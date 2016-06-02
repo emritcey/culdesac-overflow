@@ -19,34 +19,7 @@
   <script src="/js/application.js"></script>
   <title></title>
 </head>
-<body>
-
-  <div class="_topbar">
-    <div id="logo-container">
-        <a href="/"><img id="logo" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png"></a>
-    </div>
-
-    <div class="inbox-rep-links">
-        <a href="#" id="inbox-icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
-        <a href="" id="reputation_and_badges-icon"><i class="fa fa-trophy fa-3x" aria-hidden="true"></i></a>
-    </div>
-
-
-    <div class="signup-links">
-        <a href="/users/new" id="signup-link">sign up</a>
-        <% if logged_in? %>
-        <a href="/users/<%= current_user.id %>" id="login-link"><%= current_user.username %></a>
-        <% else %>
-        <a href="/users/login">log in</a>
-        <% end %>
-        <!-- <a href="">tour</a>
-        <a href="">help</a> -->
-    </div>
-</div>
-
-
-  <%= yield %>
-
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>

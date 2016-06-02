@@ -4,5 +4,10 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-
+  $('#thumbs-up').click(function(){
+    $(this).css('color', 'red')
+  });
+    $('#thumbs-down').click(function(){
+    $(this).css('color', 'red')
+  });
 });
