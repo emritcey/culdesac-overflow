@@ -4,6 +4,7 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
   $('#thumbs-up').click(function(){
     $(this).css('color', 'red');
   });
@@ -13,6 +14,33 @@ $(document).ready(function() {
   });
 
   $('.comment-form').submit(function(event) {
+
+  // =========vote form submission================
+$('button').click(function(){
+    event.preventDefault()
+    $(this).css('color', '#00C8C8')
+    var clicked_here = $(this)
+    var $form = $(this).parent()
+    var url = $form.attr("action")
+    var method = $form.attr("method")
+    var data = $(this).attr("value")
+// ok im not moving any data
+    var request = $.ajax({
+      url: url,
+      method: method,
+      data: data,
+    });
+
+    request.done(function(response) {
+      clicked_here.parent().children('p').text(response)
+    })
+  });
+
+
+
+// =================================================
+  $('form').submit(function(event) {
+>>>>>>> origin/vote-buttons
     event.preventDefault();
 
     var form = $(this);
