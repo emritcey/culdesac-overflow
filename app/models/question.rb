@@ -12,7 +12,7 @@ class Question < ActiveRecord::Base
   validates :title, :description, :user_id, presence: true
 
   def points
-    votes.sum(:value)
+    self.votes.sum(:value)
   end
 
 end
