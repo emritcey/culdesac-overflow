@@ -1,44 +1,50 @@
-<section>
-  <h1 class="question_title"> <%= @question.title %> </h1>
+<section class="question-container">
+  <h1 class="question-title"> <%= @question.title %> </h1>
+
   <div class="votebox"><%= erb :'/votes/_voting' %></div>
-  <p class="question_description"><%= @question.description %></p>
 
-  <p id="tagbox"> <% @question.tags.each do |tag| %>
-          <a href="/<%= tag.id %>"  class="tag"><%= tag.description %></a>
-        <% end %></p>
-  <ul>
-    <li class="question_stats">asked <%= @question.created_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
-    <li class="question_stats">edited <%= @question.updated_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
-    <li class="question_stats"><a href="/users/<%=@question.questioner.id %>"><%= @question.questioner.username %></a></li>
-  </ul>
-  <div class="all-question-comments">
+  <div class="question-description">
+    <p><%= @question.description %></p>
+    <p id="tagbox"> <% @question.tags.each do |tag| %>
+    <a href="/<%= tag.id %>" class="tag"><%= tag.description %></a>
+    <% end %></p>
+    <ul>
+      <li class="question-stats">asked <%= @question.created_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
+      <li class="question-stats">edited <%= @question.updated_at.strftime("%b %d") %> at <%=@question.created_at.strftime("%l:%M") %></li>
+      <li class="question-stats"><a href="/users/<%=@question.questioner.id %>"><%= @question.questioner.username %></a></li>
+    </ul>
+  </div>
+</section>
 
-    <ul class="question-comments">
-      <h3>Comments</h3>
+<section class="comment-container">
+  <div class="all-comments">
+    <ul class="comment-list">
       <% @question.comments.each do |comment| %>
-        <li> <%= comment.description %> <span class="question_stats">– <a href="/users/<%=comment.commenter.id %>"><%= comment.commenter.username %></a> <%= comment.created_at.strftime("%b %d") %> at <%= comment.created_at.strftime("%l:%M") %></span></li><br>
+        <li class="comment-list-item"> <%= comment.description %> <span class="question-stats">– <a href="/users/<%=comment.commenter.id %>"><%= comment.commenter.username %></a> <%= comment.created_at.strftime("%b %d") %> at <%= comment.created_at.strftime("%l:%M") %></span></li><br>
       <% end %>
     </ul>
 
-    <form class="comment-form" action="/questions/<%= @question.id %>/comment" method="POST">
-      <textarea class="comment_textbox" name="comment_textbox"></textarea>
-      <input type="submit" value="add comment">
-    </form>
-
+    <button class="new-comment-button button" class="button">add a comment</button>
+      <form class="comment-form hidden" action="/questions/<%= @question.id %>/comment" method="POST">
+        <textarea class="comment-textbox" name="comment_textbox"></textarea>
+        <input type="submit" id="comment-button" class="button" value="add a comment"></input>
+      </form>
   </div>
 
   <!-- <ul class="question_tags"></ul> -->
 </section>
 
 
-<section class="answers">
-  <div class="answers_header">
-    <h3 class="answers_count">
+<section class="question-container">
+  <div class="answer-header">
+    <h3 class="answer-count">
       <%= @question.answers.count %> Answers
     </h3>
-    <ul class="answers_list">
+    <%= erb :'/votes/_voting' %>
+    <ul class="answer-list">
       <%= erb :"/answers/_answers" %>
     </ul>
   </div>
-  <%= erb :'/answers/_answer_form' %>
 </section>
+
+<%= erb :'/answers/_answer_form' %>
