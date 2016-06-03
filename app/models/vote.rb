@@ -9,5 +9,6 @@ class Vote < ActiveRecord::Base
       return Question.find_by(id: votable_id).title
     end
   end
-  
+
+
 end

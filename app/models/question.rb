@@ -11,5 +11,8 @@ class Question < ActiveRecord::Base
 
   validates :title, :description, :user_id, presence: true
 
+  def points
+    votes.sum(:value)
+  end
 
 end

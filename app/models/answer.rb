@@ -6,4 +6,9 @@ class Answer < ActiveRecord::Base
   has_many   :votes, as: :votable
 
   validates :description, :user_id, :question_id, presence: true
+
+  def points
+    votes.sum(:value)
+  end
+
 end

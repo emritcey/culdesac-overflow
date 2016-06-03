@@ -37,7 +37,16 @@
       <%= @question.answers.count %> Answers
     </h3>
     <ul class="answers_list">
+
       <%= erb :"/answers/_answers" %>
+      <% if @question.answers %>
+        <% @question.answers.each do |answer| %>
+          <li><%= answer.description %><li>
+          <div class="answerer_username">
+            <%= answer.answerer.username %>
+          </div>
+        <% end %>
+      <% end %>
     </ul>
   </div>
   <%= erb :'/answers/_answer_form' %>
