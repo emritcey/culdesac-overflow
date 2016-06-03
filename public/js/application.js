@@ -32,6 +32,7 @@ $(document).ready(function() {
     request.done(function(response) {
       clicked.closest('form').find('p').text(response.points);
     });
+  });
 
   $(".new-comment-button").click(function(event){
     event.preventDefault;

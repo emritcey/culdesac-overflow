@@ -1,5 +1,5 @@
-<section class="question-container">
-  <h1 class="question-title"> <%= @question.title %> </h1>
+<section class="single-question-container">
+  <h1 class="single-question-title"> <%= @question.title %> </h1>
 
   <div class="votebox"><%= erb :'/votes/_voting' %></div>
 
@@ -35,7 +35,7 @@
 </section>
 
 
-<section class="question-container">
+<section class="single-question-container">
   <div class="answer-header">
     <h3 class="answer-count">
       <%= @question.answers.count %> Answers

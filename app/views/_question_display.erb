@@ -1,36 +1,41 @@
 <h1>Questions</h1>
-<div id="question-list-container">
+<div class="question-list-container">
 <% @questions.each do |question| %>
 
-  <div id="question-container" >
+  <div class="question-container" >
 
-    <div id="box-container"><a href="/questions/<%= question.id %>">
-        <div class="stat-boxes" id="stat-box-question">
-          <span class="value"><%= question.votes.count %></span><br>
-          <span class="word">votes</span>
+    <div class="question-stats-container"><a href="/questions/<%= question.id %>"></a>
+      <div class="stats-box stats-box-votes">
+        <span class="value"><%= question.votes.count %></span><br>
+        <span class="word">votes</span>
+      </div>
+
+      <div class="stats-box stats-box-answers">
+        <span class="value"><%= question.answers.count %> </span><br>
+        <span class="word">answers</span>
+      </div>
+
+      <div class="stats-box stats-box-views">
+        <span class="value"><%= question.views_count.to_i %></span><br>
+        <span class="word">views</span>
+      </div>
     </div>
 
-        <div class="stat-boxes" id="stat-box-answer">
-          <span class="value"><%= question.answers.count %> </span><br>
-          <span class="word">answers</span>
-          </div>
-        <div class="stat-boxes" id="stat-box-view">
-          <span class="value"><%= question.views_count.to_i %></span><br>
-          <span class="word">views</span>
-        </div>
-    </a></div>
-
     <div class="title-container">
-      <div><a id="qtitle" href="/questions/<%= question.id %>"><%= question.title %></a></div>
-      <div id="under-title">asked __ seconds ago by <a href="/users/<%=question.questioner.id %>"><%= question.questioner.username%></a> </div>
+      <div>
+        <a class="question-title" href="/questions/<%= question.id %>"><%= question.title %></a>
+      </div>
+
+      <div class="under-title">
+        <div class="tag-container">
         <% question.tags.each do |tag| %>
           <a href="/<%= tag.id %>" type="button" class="tag"><%= tag.description %></a>
         <% end %>
+        </div>
+        <span>asked __ seconds ago by <a href="/users/<%=question.questioner.id %>"><%= question.questioner.username %></a>
+        </span>
+      </div>
     </div>
-
   </div>
-
-
-
-  <% end %>
+<% end %>
 </div>
