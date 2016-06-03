@@ -1,10 +1,15 @@
 <div class="vote-forms">
-    <form action="/questions/<%= @question.id %>/vote" method="post" name="voting-buttons">
-        <button type="submit" value="up"><i class="fa fa-thumbs-o-up" aria-hidden="true" ></i> </button>
+    <form class='voting-buttons' action="/questions/<%= @question.id %>/vote" method="post" name="voting-buttons">
+
+      <button class="voting-button" type="submit" value="1">
+        <i class="fa fa-thumbs-o-up" aria-hidden="true" ></i>
+      </button>
 
       <p><%= @question.points %></p>
 
-        <button type="submit" value="down"><i class="fa fa-thumbs-o-down" aria-hidden="true" ></i></button>
-        <input type="hidden">
+      <button class="voting-button" type="submit" value="-1">
+        <i class="fa fa-thumbs-o-down" aria-hidden="true" ></i>
+      </button>
+
     </form>
 </div>

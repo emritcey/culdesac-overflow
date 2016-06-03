@@ -1,13 +1,9 @@
 post '/questions/:id/vote' do
   @question = Question.find(params[:id])
-  if params.has_key?('up')
-    @question.votes.create(value: 1)
-  else
-    @question.votes.create(value: -1)
-  end
-
+  Vote.create(value: params[:value], user_id: current_user.id, votable_id: @question.id, votable_type: "Question")
   if request.xhr?
-    @question.points.to_s
+    content_type :json
+    {points: @question.points}.to_json
   else
     redirect '/questions'
   end
