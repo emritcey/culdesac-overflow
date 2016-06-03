@@ -310,7 +310,7 @@ a {
   display: none;
 }
 
-.button {
+.new-comment-button {
   background-color: #9fa6ad;
   color: #dce1e3;
   border: none;
@@ -342,7 +342,9 @@ textarea {
 .answer-header {
   clear: both;
   margin-top: 50px;
+
 }
+
 
 .answer-count {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -432,6 +434,8 @@ textarea {
 .vote-forms {
   color: #098B8B;
 }
+
+.
 
 .tags-header {
   width: 85%;
@@ -551,6 +555,8 @@ textarea {
   border-bottom: 1px solid #B7E1FC;
   margin: 10px 0;
 }
+
+
 
 /*Color Palette*/
 
