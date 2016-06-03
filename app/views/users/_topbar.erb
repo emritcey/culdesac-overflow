@@ -1,26 +1,25 @@
 <div class="_topbar">
-
-   <div id="logo-container">
-        <a href="/"><img id="logo" src="https://raw.githubusercontent.com/emritcey/culdesac-overflow/master/public/imgs/culdesacoverflowlogo.png"></a>
+  <div class="topbar-container">
+    <div class="topbar-icons">
+      <a href="" <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+      <a href="" <i class="fa fa-trophy fa-2x" aria-hidden="true"></i></a>
     </div>
 
-    <div class="inbox-rep-links">
-        <a href="#" id="inbox-icon"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
-        <a href="" id="reputation_and_badges-icon"><i class="fa fa-trophy fa-3x" aria-hidden="true"></i></a>
+    <div class="topbar-links">
+    <% if logged_in? %>
+      <a class="topbar-link" href="/users/<%= current_user.id %>">hey, <%= current_user.username %></a> |
+      <a class="topbar-link" href="/users/logout">logout</a> |
+      <a class="topbar-link" href="/">home</a>
+    <% else %>
+      <a class="topbar-link" href="/users/new">sign up</a> |
+      <a class="topbar-link" href="/users/login">log in</a> |
+      <a class="topbar-link" href="/">home</a>
+    <% end %>
     </div>
-
-
-    <div class="signup-links">
-      <% if logged_in? %>
-          <a href="/users/<%= current_user.id %>">hey, <%= current_user.username %></a> |
-          <a href="/users/logout">logout</a> |
-          <a href="/">home</a>
-      <% else %>
-          <a href="/users/new">sign up</a> |
-          <a href="/users/login">log in</a> |
-          <a href="/">home</a>
-      <% end %>
-        <!-- <a href="">tour</a>
-        <a href="">help</a> -->
+    <div class="topbar-search-container">
+      <form>
+        <input class="topbar-search" type="" ="text" name="topbar-search">
+      </form>
     </div>
+  </div>
 </div>
