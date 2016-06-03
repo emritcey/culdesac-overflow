@@ -1,4 +1,4 @@
 get '/' do
-  @questions = Question.order(:id).all
+  @questions = Question.order(views_count: :desc).all
   erb :index
 end
