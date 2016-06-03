@@ -1,6 +1,5 @@
 <% if @question.answers %>
   <% @question.answers.each do |answer| %>
-    <%= erb :'/votes/_voting' %>
     <% if @question.favorite_answer_id == answer.id %>
         <i class="fa fa-star fa-2x green-star" aria-hidden="true"></i>
     <% else  %>
@@ -8,5 +7,11 @@
            <button class="star" type="submit"><i class="fa fa-star fa-2x" aria-hidden="true"></i></button>
         </form>
     <% end  %>
+   <div class="answer-description"><li><%= answer.description %></li></div>
+   <div class="answerer-stats">
+      <p id="timestamp">answered <%= answer.created_at.strftime("%b %d") %> at <%= answer.created_at.strftime("%l:%M") %></p>
+      <div id="fake-avatar"></div><span id="user"><a href="/users/<%= answer.answerer.id %>"><%= answer.answerer.username %></a></span>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;328 * 2 * 11</p>
+   </div>
   <% end %>
 <% end %>

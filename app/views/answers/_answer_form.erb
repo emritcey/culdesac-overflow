@@ -1,5 +1,5 @@
-<h3 class="answer_form_heading">Your Answer</h3>
+<h3 class="answer-count">Your Answer</h3>
 <form class="answer-form" action="/questions/<%= @question.id %>/answers" method="POST">
-  <textarea class="answer_textbox" name="description"></textarea>
-  <input type="submit" value="Post Your Answer">
+  <textarea class="answer-textbox" name="description"></textarea>
+  <input type="submit" id="answer-button" value="Post Your Answer">
 </form>

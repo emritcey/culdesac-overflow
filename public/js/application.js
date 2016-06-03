@@ -13,8 +13,6 @@ $(document).ready(function() {
     $(this).css('color', 'red');
   });
 
-  $('.comment-form').submit(function(event) {});
-
   // =========vote form submission================
   $('.voting-button').click(function(){
     event.preventDefault();
@@ -34,6 +32,11 @@ $(document).ready(function() {
     request.done(function(response) {
       clicked.closest('form').find('p').text(response.points);
     });
+
+  $(".new-comment-button").click(function(event){
+    event.preventDefault;
+    $(".new-comment-button").hide();
+    $(".comment-form").show();
   });
 
   $('.comment-form').submit(function(event) {
@@ -47,9 +50,11 @@ $(document).ready(function() {
     var request = $.ajax({url: url, method: method, data: data});
 
     request.done(function(comment) {
-      $('.question-comments').append(`<li> ${comment.description} <span class="question_stats">– ${comment.username} ${comment.created_at} at ${comment.created_at})</span></li>`);
-      $(form).find('.comment_textbox').val('');
+      $('.comment-list').append(`<li class="comment-list-item"> ${comment.description} <span class="question-stats">– <a href="/users/${comment.user_id}">${comment.username}</a> ${comment.created_at} at ${comment.created_at})</span></li>`);
+      $(form).find('.comment-textbox').val('');
     });
+    $(".new-comment-button").show();
+    $(".comment-form").hide();
   });
 
   $(".fa-star").click(function(){
